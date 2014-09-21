@@ -24,32 +24,162 @@ header {
 	color: #66757F;
 	height: 45px;
 	line-height: 48px;
-	padding: 0 17px;
+	padding: 0 17px 0 37px;
+	background-repeat: no-repeat;
+	transition: color 0.5s ease, background-image 0.5s ease, border-bottom 0.3s ease-in-out;
 }
 
-.nav li div:hover {
+.nav a {
+	text-decoration: none;
+}
+
+.nav li a div:hover {
 	color: #1385B2;
-	height: 44px;
+	height: 42px;
 	border-bottom: solid 4px #1385B2;
 }
 
 #home {
-	background-image: url(../img/home.png);
-	background-position: 20% 50%;
-	background-repeat: no-repeat;
-	background-size: 25%;
+	background-image: url(../img/house.png);
+	background-position: 21% 50%;
+	background-size: 22px;
 	padding-left: 40px;
-	transition: color 0.5s ease;
 }
 
 #home:hover{
-	background-image: url(../img/home-blue.png);
-	background-size: 33%;
-	background-position: 16% 53%;
+	background-image: url(../img/house-blue.png);
+	background-position: 21% 58%;
+}
+
+#notifications {
+	background-image: url(../img/notifications.png);
+	background-position: 11% 50%;
+	background-size: 22px;
+}
+
+#notifications:hover {
+	background-image: url(../img/notifications-blue.png);
+	background-position: 11% 58%;
+}
+
+#discover {
+	background-image: url(../img/discover.png);
+	background-size: 22px;
+	background-position: 13% 52%;
+}
+
+#discover:hover {
+	background-image: url(../img/discover-blue.png);
+	background-position: 13% 60%;
+}
+
+#me {
+	background-image: url(../img/me.png);
+	background-size: 22px;
+	background-position: 21% 52%;
+}
+
+#me:hover {
+	background-image: url(../img/me-blue.png);
+	background-position: 21% 60%;
 }
 
 #logo {
 	display: block;
-	width: 300px;
+	width: 330px;
 	text-align: center;
+	background-image: url(../img/logo.png);
+	background-size: 22px;
+	background-position: 50% 55%;
+}
+
+input {
+	width: 197px;
+	border: none;
+	background-color: #A3ACB2;
+	color: white;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	padding: 10px 12px 8px;
+	border-radius: 50px;
+	margin: 7px 11px 7px 27px;
+	font-size: 0.9em;
+	background-image: url(../img/search.png);
+	background-size: 14px;
+	background-position: 95% 50%;
+	background-repeat: no-repeat;
+	transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+	background-color: #66757F;
+	outline: none;
+}
+
+.nav .action {
+	padding: 0 10px;
+	width: 28px;
+	transition: background-image 0.2s ease;
+}
+
+#messages {
+	background-image: url(../img/messages.png);
+	background-position: center center;
+	background-size: 22px;
+}
+
+#messages:hover {
+	background-image: url(../img/messages-blue.png);
+}
+
+#settings {
+	background-image: url(../img/settings.png);
+	background-position: center center;
+	background-size: 22px;
+}
+
+#settings:hover {
+	background-image: url(../img/settings-blue.png);
+}
+
+#post-tweet {
+	margin: 7px 0 7px 8px;
+	height: 32px;
+	width: 20px;
+	border-radius: 4px;
+	background-color: #1385B2;
+	background-image: url(../img/post-tweet.png);
+	background-size: 24px;
+	background-position: 52% center;
+}
+
+input::-webkit-input-placeholder {
+   color: #fff;
+}
+
+input:focus::-webkit-input-placeholder {
+	color: #A3AFB7;
+}
+
+input:focus:-moz-placeholder { /* Firefox 18- */
+   color: #fff;  
+}
+
+input:focus:-moz-placeholder { /* Firefox 18- */
+   color: #A3AFB7;  
+}
+
+input:focus::-moz-placeholder {  /* Firefox 19+ */
+   color: #fff;  
+}
+
+input:focus::-moz-placeholder {  /* Firefox 19+ */
+   color: #A3AFB7;  
+}
+
+input:focus:-ms-input-placeholder {  
+   color: #fff;  
+}
+
+input:focus:-ms-input-placeholder {  
+   color: #A3AFB7;  
 }
