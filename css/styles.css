@@ -216,12 +216,33 @@ h1 {
 }
 
 .tweet-unit {
-	padding: 10px;
+	color: #292F33;
+	padding: 9px;
 	border-top: 1px solid #E1E8ED;
 }
 
 .tweet-avatar {
-	height: 50px;
-	border-radius: 4px;
+	height: 48px;
+	border-radius: 5px;
 	float: left;
+	margin: 3px 10px 3px 3px;
+}
+
+.name {
+	font-weight: 500;
+}
+
+.source {
+	font-size: 13px;
+	line-height: 18px;
+	color: #8999A5;
+}
+
+.tweet-content a {
+	color: #1385B2;
+	text-decoration: none;
+}
+
+.tweet-content a:hover {
+	text-decoration: underline;
 }
