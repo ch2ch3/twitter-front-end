@@ -1,0 +1,55 @@
+body {
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+
+header {
+	font-size: 13px;
+	line-height: 13px;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 1px 1px 1px #cdcdcd;
+	padding: 0 43px;
+	height: 45px;
+	position: fixed;
+	width: 100%;
+}
+
+.nav li {
+	float: left;
+	font-weight: 500;
+}
+
+.nav li div {
+	color: #66757F;
+	height: 45px;
+	line-height: 48px;
+	padding: 0 17px;
+}
+
+.nav li div:hover {
+	color: #1385B2;
+	height: 44px;
+	border-bottom: solid 4px #1385B2;
+}
+
+#home {
+	background-image: url(../img/home.png);
+	background-position: 20% 50%;
+	background-repeat: no-repeat;
+	background-size: 25%;
+	padding-left: 40px;
+	transition: color 0.5s ease;
+}
+
+#home:hover{
+	background-image: url(../img/home-blue.png);
+	background-size: 33%;
+	background-position: 16% 53%;
+}
+
+#logo {
+	display: block;
+	width: 300px;
+	text-align: center;
+}
