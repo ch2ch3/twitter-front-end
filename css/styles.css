@@ -242,12 +242,12 @@ h1 {
 	color: #8999A5;
 }
 
-.tweet-content a {
+.tweet-content p a {
 	color: #1385B2;
 	text-decoration: none;
 }
 
-.tweet-content a:hover {
+.tweet-content p a:hover {
 	text-decoration: underline;
 }
 
@@ -264,6 +264,10 @@ h1 {
 	background-repeat: no-repeat;
 	float: right;
 	color: #8999A5;
+}
+
+.tweet-actions div:hover {
+	text-decoration: underline;
 }
 
 .summary, .expand {
@@ -320,8 +324,6 @@ h1 {
 	bottom: 30px;
 	left: 2px;
 }
-
-
 
 .retweeted {
 	font-size: 12px;
