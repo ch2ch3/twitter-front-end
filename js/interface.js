@@ -1,9 +1,9 @@
 $('document').ready(function(){
 	
 	$('.tweet-unit').hover(function(){
-		$('#test').hide();
+		$(this).find('.opacity').hide();
 	}, function(){
-		$('#test').show();
+		$(this).find('.opacity').show();
 	});
 
 });
