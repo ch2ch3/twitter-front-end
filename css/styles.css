@@ -217,7 +217,7 @@ h1 {
 
 .tweet-unit {
 	color: #292F33;
-	padding: 9px;
+	padding: 9px 9px 1px;
 	border-top: 1px solid #E1E8ED;
 }
 
@@ -254,26 +254,33 @@ h1 {
 .tweet-actions {
 	height: 26px;
 	font-size: 12px;
-	line-height: 34px;
+	line-height: 18px;
 	float: right;
-	width: 100%;
-	padding: 0 3px;
+	width: 506px;
+	padding: 7px 3px 0 0;
 }
 
-.tweet-actions div:not(.summary) {
+.tweet-actions div:not(.summary):not(.expand) {
 	background-repeat: no-repeat;
 	float: right;
 	color: #8999A5;
 }
 
-.summary {
-	padding-left: 81px;
+.summary, .expand {
 	float: left;
+}
+
+.summary {
+	padding-left: 17px;
 	color: #1988B4;
 	background-image: url(../img/summary.png);
 	background-repeat: no-repeat;
-	background-position: 42% 45%;
+	background-position: -3% 45%;
 	background-size: 13px;
+}
+
+.expand {
+	color: #8999A5;
 }
 
 .more {
@@ -310,17 +317,9 @@ h1 {
 	float: right;
 	width: 270px;
 	position: relative;
-	bottom: 24px;
+	bottom: 30px;
 	left: 2px;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -328,7 +327,7 @@ h1 {
 	font-size: 12px;
 	line-height: 18px;
 	color: #8999A5;
-	padding-left: 62px;
+	padding: 2px 0 0 62px;
 	background-image: url(../img/retweeted.png);
 	background-repeat: no-repeat;
 	background-size: 17px;
