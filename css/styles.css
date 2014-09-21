@@ -8,7 +8,7 @@ header {
 	font-size: 13px;
 	line-height: 13px;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
-	box-shadow: 1px 1px 1px #cdcdcd;
+	box-shadow: 0px 1px 1px #cdcdcd;
 	padding: 0 43px;
 	height: 45px;
 	position: fixed;
@@ -182,4 +182,46 @@ input:focus:-ms-input-placeholder {
 
 input:focus:-ms-input-placeholder {  
    color: #A3AFB7;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+	font-size: 22px;
+	line-height: 22px;
+	font-weight: 300;
+	color: #66757F;
+	margin: 11px 12px 12px 12px;
+}
+
+.tweet-container {
+	width: 588px;
+	margin: 38px auto;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	padding-top: 1px;
+	border: solid 1px #E1E8ED;
+}
+
+.tweet-unit {
+	padding: 10px;
+	border-top: 1px solid #E1E8ED;
+}
+
+.tweet-avatar {
+	height: 50px;
+	border-radius: 4px;
+	float: left;
 }
