@@ -221,6 +221,10 @@ h1 {
 	border-top: 1px solid #E1E8ED;
 }
 
+.tweet-unit:hover {
+	background-color: #F5F8FA;
+}
+
 .tweet-avatar {
 	height: 48px;
 	border-radius: 5px;
@@ -245,4 +249,57 @@ h1 {
 
 .tweet-content a:hover {
 	text-decoration: underline;
+}
+
+.tweet-actions {
+	height: 26px;
+	font-size: 12px;
+	line-height: 34px;
+	float: right;
+	width: 100%;
+	padding: 0 3px;
+}
+
+.tweet-actions div:not(#summary) {
+	background-repeat: no-repeat;
+	float: right;
+	color: #8999A5;
+}
+
+#summary {
+	padding-left: 81px;
+	float: left;
+	color: #1988B4;
+	background-image: url(../img/summary.png);
+	background-repeat: no-repeat;
+	background-position: 42% 45%;
+	background-size: 13px;
+}
+
+#more {
+	background-image: url(../img/more.png);
+	background-size: 17px;
+	background-position: 0% 47%;
+	padding: 0 0 0 23px;
+}
+
+#favorite {
+	background-image: url(../img/favorite.png);
+	background-size: 13px;
+	background-position: 0% 45%;
+	padding: 0 9px 0 20px;
+}
+
+#retweet {
+	background-image: url(../img/retweet.png);
+	background-size: 17px;
+	background-position: 0% 48%;
+	padding: 0 9px 0 24px;
+}
+
+#reply {
+	background-image: url(../img/reply.png);
+	background-size: 13px;
+	background-position: 0% 47%;
+	padding: 0 9px 0 20px;
 }
