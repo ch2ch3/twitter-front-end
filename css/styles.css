@@ -13,6 +13,7 @@ header {
 	height: 45px;
 	position: fixed;
 	width: 100%;
+	background-color: #FFF;
 }
 
 .nav li {
@@ -184,20 +185,6 @@ input:focus:-ms-input-placeholder {
    color: #A3AFB7;  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 h1 {
 	font-size: 22px;
 	line-height: 22px;
@@ -260,7 +247,7 @@ h1 {
 	padding: 7px 3px 0 0;
 }
 
-.tweet-actions div:not(.summary):not(.expand) {
+.tweet-actions div:not(.content-action) {
 	background-repeat: no-repeat;
 	float: right;
 	color: #8999A5;
@@ -270,7 +257,7 @@ h1 {
 	text-decoration: underline;
 }
 
-.summary, .expand {
+.content-action {
 	float: left;
 }
 
@@ -325,7 +312,7 @@ h1 {
 	left: 2px;
 }
 
-.retweeted {
+.retweet-indicator.retweeted-tweet {
 	font-size: 12px;
 	line-height: 18px;
 	color: #8999A5;
@@ -334,4 +321,101 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: 17px;
 	background-position: 6.5% 52%;
+}
+
+.image {
+	height: 253px;
+	width: 506px;
+	margin: 9px 3px 6px 0;
+	border-radius: 6px;
+	background-color: #ddd;
+	float: right;
+	overflow: hidden;
+}
+
+img.image-tweet {
+	position: relative;
+	bottom: 63px;
+	width: 506px;
+}
+
+.expand-image, .view-photo {
+	color: #1988B4;
+	padding-left: 22px;
+	background-image: url(../img/expand-image.png);
+	background-repeat: no-repeat;
+	background-position: 1% 13%;
+	background-size: 16px;
+}
+
+.hashtag {
+	color: #1988B4;
+}
+
+.tweet-actions.promoted-tweet, .opacity.promoted-tweet {
+	display: none;
+}
+
+.promoted-tweet-actions {
+	display: none;
+}
+
+.promoted-tweet-actions.promoted-tweet {
+	display: initial;
+	border-top: 1px solid #E1E8ED;
+	float: right;
+	width: 508px;
+	margin-top: 12px;
+	padding: 12px 2px 0 0;
+}
+
+.promoted-indicator {
+	color: #8999A5;
+	font-size: 13px;
+	line-height: 18px;
+	padding: 5px 0 0 26px;
+	background-image: url(../img/promoted.png);
+	background-repeat: no-repeat;
+	background-size: 18px;
+	background-position: 0% 66%;
+	margin-bottom: -15px;
+}
+
+.promoted-tweet-wrapper {
+	float: left;
+}
+
+button.promoted-tweet {
+	float: right;
+	position: relative;
+	bottom: 30px;
+	background-image: url(../img/follow.png);
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 35px;
+	line-height: 15px;
+	border: 1px solid #E1E8ED;
+	background-color: #f5f8fa;
+	background-image: linear-gradient(#fff,#f5f8fa);
+	margin-top: 4px;
+	border-radius: 5px;
+	font-weight: bold;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	padding: 0 12px;
+}
+
+img.follow {
+	float: left;
+	height: 15px;
+	margin-right: 3px;
+}
+
+button.promoted-tweet:hover {
+	background-image: linear-gradient(#fff,#E1E8ED);
+}
+
+button.promoted-tweet:active {
+	background-color: #E1E8ED;
+	box-shadow: inset 1px 1px 7px #CDD3D8;
 }
