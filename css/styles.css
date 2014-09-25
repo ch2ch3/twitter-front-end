@@ -655,3 +655,33 @@ img.follow.follow-suggestions {
 	background-size: 27px;
 	background-position: 12px center;
 }
+
+.about-twitter {
+	position: absolute;
+	top: 313px;
+	right: 43px;
+	margin-top: 38px;
+	border-radius: 5px;
+	border: solid 1px #E1E8ED;
+	background-color: #FFFFFF;
+	width: 261px;
+	padding: 15px 15px 15px 12px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 200;
+	letter-spacing: 0.2px;
+	color: #8899A6;
+}
+
+.about-twitter ul {
+	display: inline;
+}
+
+.about-twitter li {
+	float: left;
+	margin: 3px 4px;
+}
+
+.about-twitter li:not(:first-child):hover {
+	text-decoration: underline;
+}
