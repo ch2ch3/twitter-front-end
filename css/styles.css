@@ -24,7 +24,7 @@ header {
 .nav li div {
 	color: #66757F;
 	height: 45px;
-	line-height: 48px;
+	line-height: 46px;
 	padding: 0 17px 0 37px;
 	background-repeat: no-repeat;
 	transition: color 0.5s ease, background-image 0.5s ease, border-bottom 0.3s ease-in-out;
@@ -94,7 +94,7 @@ header {
 	background-position: 50% 55%;
 }
 
-input {
+#search {
 	width: 197px;
 	border: none;
 	background-color: #A3ACB2;
@@ -111,7 +111,7 @@ input {
 	transition: all 0.3s ease-in-out;
 }
 
-input:focus {
+#search:focus {
 	background-color: #66757F;
 	outline: none;
 }
@@ -153,35 +153,39 @@ input:focus {
 	background-position: 52% center;
 }
 
-input::-webkit-input-placeholder {
+#search::-webkit-input-placeholder {
    color: #fff;
 }
 
-input:focus::-webkit-input-placeholder {
+#compose-tweet-input::-webkit-input-placeholder {
+	color: #8999A5;
+}
+
+#search:focus::-webkit-input-placeholder {
 	color: #A3AFB7;
 }
 
-input:focus:-moz-placeholder { /* Firefox 18- */
+#search:focus:-moz-placeholder { /* Firefox 18- */
    color: #fff;  
 }
 
-input:focus:-moz-placeholder { /* Firefox 18- */
+#search:focus:-moz-placeholder { /* Firefox 18- */
    color: #A3AFB7;  
 }
 
-input:focus::-moz-placeholder {  /* Firefox 19+ */
+#search:focus::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;  
 }
 
-input:focus::-moz-placeholder {  /* Firefox 19+ */
+#search:focus::-moz-placeholder {  /* Firefox 19+ */
    color: #A3AFB7;  
 }
 
-input:focus:-ms-input-placeholder {  
+#search:focus:-ms-input-placeholder {  
    color: #fff;  
 }
 
-input:focus:-ms-input-placeholder {  
+#search:focus:-ms-input-placeholder {  
    color: #A3AFB7;  
 }
 
@@ -193,9 +197,115 @@ h1 {
 	margin: 11px 12px 12px 12px;
 }
 
+.profile {
+	margin: 38px 0 0 43px;
+	float: left;
+	border-radius: 5px;
+	border: solid 1px #E1E8ED;
+	background-color: #FFFFFF;
+	width: 288px;
+	height: 250px;
+}
+
+#compose-tweet {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+	background-color: #E5F2F7;
+	width: 264px;
+	border: solid 1px #C5E1EC;
+	padding: 10px 12px;
+	margin-top: 2px;
+	margin-left: 8px;
+}
+
+#compose-tweet input {
+	border-radius: 2px;
+	border: solid 1px #C5E1EC;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 200;
+	letter-spacing: 0.3px;
+	padding: 6px 8px;
+	width: 93%;
+}
+
+#profile-background {
+	background-color: #1385B2;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	height: 95px;
+	width: 290px;
+	position: relative;
+	right: 1px;
+	bottom: 1px;
+}
+
+#user-name {
+	font-size: 18px;
+	line-height: 21px;
+	font-weight: 600;
+}
+
+#user-handle {
+	font-size: 12px;
+	line-height: 17px;
+	color: #76858F;
+	font-weight: 200;
+}
+
+#user-avatar {
+	height: 70px;
+	position: absolute;
+	top: 122px;
+	left: 52px;
+	border-radius: 7px;
+	border: solid 3px white;
+}
+
+#user-info {
+	position: absolute;
+	top: 160px;
+	left: 134px;
+}
+
+#user-stats {
+	position: absolute;
+	top: 211px;
+	left: 55px;
+}
+
+#user-stats-headings th {
+	text-align: left;
+	font-size: 10px;
+	line-height: 10px;
+	font-weight: 200;
+	letter-spacing: 0.5px;
+	color: #8D9CA8;
+	height: 13px;
+}
+
+#user-stats-headings th:hover {
+	color: #1385B2;
+}
+
+#user-stats-content {
+	font-size: 18px;
+	line-height: 18px;
+	font-weight: 500;
+	color: #1385B2;
+}
+
+#compose-tweet {
+	position: absolute;
+	top: 250px;
+	left: 35px;
+}
+
 .tweet-container {
 	width: 588px;
-	margin: 38px auto;
+	margin: 38px 10px;
+	float: left;
 	background-color: #FFFFFF;
 	border-radius: 5px;
 	padding-top: 1px;
@@ -227,6 +337,8 @@ h1 {
 	font-size: 13px;
 	line-height: 18px;
 	color: #8999A5;
+	font-weight: 200;
+	letter-spacing: 0.3px;
 }
 
 .tweet-content p a {
@@ -245,6 +357,7 @@ h1 {
 	float: right;
 	width: 506px;
 	padding: 7px 3px 0 0;
+	font-weight: 200;
 }
 
 .tweet-actions div:not(.content-action) {
@@ -266,7 +379,7 @@ h1 {
 	color: #1988B4;
 	background-image: url(../img/summary.png);
 	background-repeat: no-repeat;
-	background-position: -3% 45%;
+	background-position: -1% 40%;
 	background-size: 13px;
 }
 
@@ -373,6 +486,7 @@ img.image-tweet {
 	color: #8999A5;
 	font-size: 13px;
 	line-height: 18px;
+	font-weight: 200;
 	padding: 5px 0 0 26px;
 	background-image: url(../img/promoted.png);
 	background-repeat: no-repeat;

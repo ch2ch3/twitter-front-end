@@ -14,13 +14,34 @@
 			<li><a href="#"><div id="discover">Discover</div></a></li>
 			<li><a href="#"><div id="me">Me</div></a></li>
 			<li><div id="logo"></div></li>
-			<li><input type="text" placeholder="Search Twitter"></li>
+			<li><input type="text" id="search" placeholder="Search Twitter"></li>
 			<li><div class="action" id="messages"></div></li>
 			<li><div class="action" id="settings"></div></li>
 			<li><div class="action" id="post-tweet"></div></li>
 		</ul>
 	</header>
 	<br clear="all">
+	<div class="profile">
+		<div id="profile-background"></div>
+		<img src="img/my-face.jpg" id="user-avatar">
+		<div id="user-info"><p id="user-name">Ethel</p>
+		<p id="user-handle">@_ch2ch3</p></div>
+		<table id="user-stats">
+			<tr id="user-stats-headings">
+				<th width="78px">TWEETS</th>
+				<th width="98px">FOLLOWING</th>
+				<th>FOLLOWERS</th>
+			</tr>
+			<tr id="user-stats-content">
+				<td>4</td>
+				<td>46</td>
+				<td>2</td>
+			</tr>
+		</table>
+	</div>
+	<div id="compose-tweet">
+		<input type="text" id="compose-tweet-input" placeholder="Compose new Tweet...">
+	</div>
 	<main class="tweet-container">
 		<h1>Tweets</h1>
 		<article class="tweet-unit">
