@@ -2,6 +2,11 @@ body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
+	/*background-image: url(../img/clouds.png);
+	background-attachment: fixed;
+	background-color: rgb(192, 222, 237);
+	background-repeat: no-repeat no-repeat;
+	background-position: center 40px;*/
 }
 
 header {
@@ -42,47 +47,49 @@ header {
 
 #home {
 	background-image: url(../img/house.png);
-	background-position: 21% 50%;
+	background-position: 20% 58%;
 	background-size: 22px;
 	padding-left: 40px;
+	height: 42px;
+	border-bottom: solid 4px #1385B2;
 }
 
 #home:hover{
 	background-image: url(../img/house-blue.png);
-	background-position: 21% 58%;
+	background-position: 20% 58%;
 }
 
 #notifications {
 	background-image: url(../img/notifications.png);
-	background-position: 11% 50%;
+	background-position: 11% 54%;
 	background-size: 22px;
 }
 
 #notifications:hover {
 	background-image: url(../img/notifications-blue.png);
-	background-position: 11% 58%;
+	background-position: 11% 63%;
 }
 
 #discover {
 	background-image: url(../img/discover.png);
 	background-size: 22px;
-	background-position: 13% 52%;
+	background-position: 13% 54%;
 }
 
 #discover:hover {
 	background-image: url(../img/discover-blue.png);
-	background-position: 13% 60%;
+	background-position: 13% 63%;
 }
 
 #me {
 	background-image: url(../img/me.png);
 	background-size: 22px;
-	background-position: 21% 52%;
+	background-position: 21% 54%;
 }
 
 #me:hover {
 	background-image: url(../img/me-blue.png);
-	background-position: 21% 60%;
+	background-position: 21% 63%;
 }
 
 #logo {
@@ -197,6 +204,18 @@ h1 {
 	margin: 11px 12px 12px 12px;
 }
 
+h2 {
+	font-size: 20px;
+	line-height: 22px;
+	font-weight: 300;
+	color: #66757F;
+}
+
+.trending h2, .follow-suggestions h2 {
+	display: inline;
+	letter-spacing: 0px;
+}
+
 .profile {
 	margin: 38px 0 0 43px;
 	float: left;
@@ -218,7 +237,7 @@ h1 {
 	margin-left: 8px;
 }
 
-#compose-tweet input {
+#compose-tweet-input {
 	border-radius: 2px;
 	border: solid 1px #C5E1EC;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -227,7 +246,13 @@ h1 {
 	font-weight: 200;
 	letter-spacing: 0.3px;
 	padding: 6px 8px;
-	width: 93%;
+	width: 246px;
+}
+
+#compose-tweet-input:focus {
+	outline: none;
+	border: solid 0.5px #1385B2;
+	padding: 6.5px 8.5px;
 }
 
 #profile-background {
@@ -302,6 +327,41 @@ h1 {
 	left: 35px;
 }
 
+.trending {
+	position: absolute;
+	top: 320px;
+	margin-left: 43px;
+	float: left;
+	border-radius: 5px;
+	border: solid 1px #E1E8ED;
+	background-color: #FFFFFF;
+	width: 258px;
+	height: 228px;
+	padding: 15px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 200;
+	letter-spacing: 0.2px;
+}
+
+.trending ul {
+	margin-top: 10px;
+}
+
+.trending li {
+	margin-bottom: 8px;
+}
+
+.trending a, .follow-suggestions a {
+	font-weight: 200;
+	color: #0084b4;
+	text-decoration: none;
+}
+
+.trending a:hover {
+	text-decoration: underline;
+}
+
 .tweet-container {
 	width: 588px;
 	margin: 38px 10px;
@@ -358,6 +418,7 @@ h1 {
 	width: 506px;
 	padding: 7px 3px 0 0;
 	font-weight: 200;
+	letter-spacing: 0.3px;
 }
 
 .tweet-actions div:not(.content-action) {
@@ -428,6 +489,8 @@ h1 {
 .retweet-indicator.retweeted-tweet {
 	font-size: 12px;
 	line-height: 18px;
+	font-weight: 200;
+	letter-spacing: 0.3px;
 	color: #8999A5;
 	padding: 2px 0 0 62px;
 	background-image: url(../img/retweeted.png);
@@ -532,4 +595,23 @@ button.promoted-tweet:hover {
 button.promoted-tweet:active {
 	background-color: #E1E8ED;
 	box-shadow: inset 1px 1px 7px #CDD3D8;
+}
+
+.follow-suggestions h2 {
+	display: inline;
+}
+
+.follow-suggestions {
+	float: left;
+	margin-top: 38px;
+	border-radius: 5px;
+	border: solid 1px #E1E8ED;
+	background-color: #FFFFFF;
+	width: 258px;
+	height: 228px;
+	padding: 15px;
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 200;
+	letter-spacing: 0.2px;
 }
