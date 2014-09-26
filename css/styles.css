@@ -17,6 +17,7 @@ header {
 	padding: 0 43px;
 	height: 45px;
 	position: fixed;
+	z-index: 9999;
 	width: 100%;
 	background-color: #FFF;
 }
@@ -651,6 +652,12 @@ button.follow-suggestions {
 img.follow.follow-suggestions {
 	height: 13px;
 	margin-right: 0;
+}
+
+.tweet-container-footer {
+	border-top: 1px solid #E1E8ED;
+	text-align: center;
+	padding: 13px 0;
 }
 
 #follow-actions {

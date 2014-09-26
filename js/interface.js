@@ -1,9 +1,11 @@
 $('document').ready(function(){
-	
-	$('.tweet-unit').hover(function(){
+
+	$('.tweet-container').on('mouseenter', '.tweet-unit', function(){
 		$(this).find('.opacity').hide();
 		$(this).find('.expand').css('color', '#1988B4')
-	}, function(){
+	});
+
+	$('.tweet-container').on('.mouseleave', '.tweet-unit', function(){
 		$(this).find('.opacity').show();
 		$(this).find('.expand').css('color', '#8999A5')
 	});
@@ -24,11 +26,16 @@ $('document').ready(function(){
 
 	$(window).scroll(function(){
 		if($(window).scrollTop() > $(document).height() - $(window).height()){
-			$.get('./data/data.html', function(contents){
-				$('.tweet-container').append(contents)
-			}).fail(function(){
-				alert('No more tweets.');
-			});
+			setTimeout(getTweets, 700);
+			function getTweets(){
+				$.get('./data/data.html', function(contents){
+					$('.tweet-container').append(contents)
+					$('.tweet-container-footer').clone().appendTo('.tweet-container')
+					$('.tweet-container-footer:first-of-type').remove()
+				}).fail(function(){
+					alert('No more tweets.');
+				});
+			}
 		};
 	});
 
