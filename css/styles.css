@@ -2,11 +2,11 @@ body {
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	line-height: 18px;
-	/*background-image: url(../img/clouds.png);
+	background-image: url(../img/clouds.png);
 	background-attachment: fixed;
 	background-color: rgb(192, 222, 237);
 	background-repeat: no-repeat no-repeat;
-	background-position: center 40px;*/
+	background-position: center 40px;
 }
 
 header {
@@ -359,7 +359,7 @@ h2 {
 	text-decoration: none;
 }
 
-.trending a:hover {
+.trending a:hover, .follow-suggestions a:hover {
 	text-decoration: underline;
 }
 
@@ -391,16 +391,28 @@ h2 {
 }
 
 .name {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 500;
+	color: #000000;
+	letter-spacing: 0;
 }
 
-.source {
+.source, .timestamp {
 	font-size: 13px;
 	line-height: 18px;
 	color: #8999A5;
 	font-weight: 200;
 	letter-spacing: 0.3px;
+}
+
+.timestamp a {
+	color: #8999A5;
+	text-decoration: none;
+}
+
+.timestamp a:hover {
+	color: #1385B2;
+	text-decoration: underline;
 }
 
 .tweet-content p a {
