@@ -2,12 +2,12 @@ $('document').ready(function(){
 
 	$('.tweet-container').on('mouseenter', '.tweet-unit', function(){
 		$(this).find('.opacity').hide();
-		$(this).find('.expand').css('color', '#1988B4')
+		$(this).find('.expand').css('color', '#1988B4');
 	});
 
-	$('.tweet-container').on('.mouseleave', '.tweet-unit', function(){
+	$('.tweet-container').on('mouseleave', '.tweet-unit', function(){
 		$(this).find('.opacity').show();
-		$(this).find('.expand').css('color', '#8999A5')
+		$(this).find('.expand').css('color', '#8999A5');
 	});
 
 	$('.source').hover(function(){
