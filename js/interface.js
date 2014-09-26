@@ -39,4 +39,17 @@ $('document').ready(function(){
 		};
 	});
 
+	$('#compose-tweet-input').on('click', function(){
+		$(this).css('height', '79px')
+		$('.trending').css('top', '425px')
+		$('#compose-tweet-submit').css('display', 'inline')
+		$('#charcount').show()
+	})
+
+	$('#compose-tweet-input').keyup(function(){
+		var max = 140;
+		var charactersLeft = max - this.value.length;
+		$('#charcount').text(charactersLeft);
+	});
+
 });
