@@ -24,8 +24,12 @@ $('document').ready(function(){
 
 	$(window).scroll(function(){
 		if($(window).scrollTop() > $(document).height() - $(window).height()){
-			$.get
-		}
-	})
+			$.get('./data/data.html', function(contents){
+				$('.tweet-container').append(contents)
+			}).fail(function(){
+				alert('No more tweets.');
+			});
+		};
+	});
 
 });
