@@ -50,6 +50,11 @@ $('document').ready(function(){
 		var max = 140;
 		var charactersLeft = max - this.value.length;
 		$('#charcount').text(charactersLeft);
+		if(this.value.length > 0) {
+			$('#compose-tweet-submit').css('opacity', '1.0');
+		} else {
+			$('#compose-tweet-submit').css('opacity', '0.2');
+		}
 	});
 
 });
