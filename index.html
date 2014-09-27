@@ -23,9 +23,9 @@
 			<li><a href="#post-tweet-modal" rel='modal:open'><div class="action" id="post-tweet"></div></a></li>
 		</ul>
 	</header>
-	<div id="post-tweet-modal" class="tweet-modal">
-		<div id="tweet-modal-heading">Compose new Tweet</div>
-		<div id="tweet-modal-body">
+	<div id="post-tweet-modal">
+		<div class="tweet-modal heading">Compose new Tweet</div>
+		<div class="tweet-modal body">
 			<textarea class="tweet-modal compose-tweet-input"></textarea>
 			<button class="tweet-modal compose-tweet-submit">Tweet</button>
 			<div class="tweet-modal charcount">140</div>
@@ -34,24 +34,24 @@
 		</div>
 	</div>
 	<br clear="all">
-	<div id="profile">
+	<div id="profile-container">
 		<div id="profile-background"></div>
 		<img src="img/my-face.jpg" id="user-avatar">
 		<div id="user-info"><p id="user-name">Ethel</p>
 		<p id="user-handle">@_ch2ch3</p></div>
-		<table id="user-stats">
-			<tr id="user-stats-headings">
+		<table class="user-stats">
+			<tr class="user-stats headings">
 				<th width="78px">TWEETS</th>
 				<th width="98px">FOLLOWING</th>
 				<th>FOLLOWERS</th>
 			</tr>
-			<tr id="user-stats-content">
+			<tr class="user-stats content">
 				<td>4</td>
 				<td>46</td>
 				<td>2</td>
 			</tr>
 		</table>
-		<div id="compose-tweet">
+		<div id="profile-compose-tweet-container">
 			<textarea class="profile compose-tweet-input" placeholder="Compose new Tweet..."></textarea>
 			<button class="profile compose-tweet-submit">Tweet</button>
 			<div class="profile charcount">140</div>
@@ -59,7 +59,7 @@
 			<div class="profile upload-photo"></div>
 		</div>
 	</div>
-	<div class="trending">
+	<div class="trending container">
 		<h2>United Kingdom Trends</h2> ᐧ <a href="#">Change</a>
 		<ul>
 			<li><a href="#">Vardy</a></li>
@@ -74,7 +74,7 @@
 			<li><a href="#">Blackett</a></li>
 		</ul>
 	</div>
-	<main class="tweet-container">
+	<main class="tweet container">
 		<h1>Tweets</h1>
 		<article class="tweet-unit">
 			<div class="retweet-indicator"></div>
@@ -168,11 +168,11 @@
 				<br clear="all">
 			</section>
 		</article>
-		<section class="tweet-container-footer">
+		<section id="tweet-container-footer">
 			<img src="img/spinner.gif">
 		</section>
 	</main>
-	<section class="follow-suggestions">
+	<section class="follow-suggestions container">
 		<h2>Who to follow</h2> ᐧ <a href="#">Refresh</a> ᐧ <a href="#">View all</a>
 		<ul>
 			<li>
@@ -191,7 +191,7 @@
 				<button class="follow follow-suggestions"><img src="img/follow.png" class="follow follow-suggestions">Follow</button>
 			</li>
 		</ul>
-		<div id="follow-actions">
+		<div class="follow-suggestions actions">
 			<a href="#">Find people you know</a> ᐧ <a href="#">Popular accounts</a>
 		</div>
 	</section>
