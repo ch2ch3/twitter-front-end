@@ -23,15 +23,17 @@
 			<li><a href="#post-tweet-modal" rel='modal:open'><div class="action" id="post-tweet"></div></a></li>
 		</ul>
 	</header>
-	<div id="post-tweet-modal" class="modal">
-		<div id="modal-heading">Compose new Tweet</div>
-		<div id="modal-body"><textarea id="modal-compose" class="compose-tweet-input"></textarea>
-		<div id="modal-upload-photo">Add photo</div>
-		<div id="modal-location">Location disabled</div>
+	<div id="post-tweet-modal" class="tweet-modal">
+		<div id="tweet-modal-heading">Compose new Tweet</div>
+		<div id="tweet-modal-body"><textarea class="tweet-modal compose-tweet-input"></textarea>
+		<button class="tweet-modal compose-tweet-submit">Tweet</button>
+		<div class="tweet-modal charcount">140</div>
+		<div class="tweet-modal location">Location disabled</div>
+		<div class="tweet-modal upload-photo">Add photo</div>
 		</div>
 	</div>
 	<br clear="all">
-	<div class="profile">
+	<div id="profile">
 		<div id="profile-background"></div>
 		<img src="img/my-face.jpg" id="user-avatar">
 		<div id="user-info"><p id="user-name">Ethel</p>
@@ -49,11 +51,11 @@
 			</tr>
 		</table>
 		<div id="compose-tweet">
-			<textarea id="profile-compose" class="compose-tweet-input" placeholder="Compose new Tweet..."></textarea>
-			<button id="compose-tweet-submit">Tweet</button>
-			<div id="charcount">140</div>
-			<div id="location"></div>
-			<div id="upload-photo"></div>
+			<textarea class="profile compose-tweet-input" placeholder="Compose new Tweet..."></textarea>
+			<button class="profile compose-tweet-submit">Tweet</button>
+			<div class="profile charcount">140</div>
+			<div class="profile location"></div>
+			<div class="profile upload-photo"></div>
 		</div>
 	</div>
 	<div class="trending">

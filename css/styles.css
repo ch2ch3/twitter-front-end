@@ -166,13 +166,6 @@ header {
 	background-color: #107298;
 }
 
-#post-tweet-modal {
-	display: none;
-	position: fixed;
-	background-color: #FFFFFF;
-	color: #000000;
-}
-
 #search::-webkit-input-placeholder {
    color: #fff;
 }
@@ -230,7 +223,7 @@ h2 {
 	letter-spacing: 0px;
 }
 
-.profile {
+#profile {
 	margin: 38px 0 0 43px;
 	float: left;
 	border-radius: 5px;
@@ -267,32 +260,35 @@ h2 {
 	padding: 6px 8px;
 }
 
-#profile-compose {
+.profile.compose-tweet-input {
 	width: 246px;
 	height: 18px;
 	margin-top: 2px;
 }
 
-#post-tweet-modal {
-	width: 522px;
+.tweet-modal.compose-tweet-input {
+	width: 473px;
+	height: 90px;
+	margin: 0 auto;
 }
 
-#modal-body {
+#post-tweet-modal {
+	width: 522px;
+	display: none;
+	position: fixed;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+#tweet-modal-body {
 	background-color: #E8F3F7;
 	border-top: solid 1px #C5E1EC;
 	border-bottom-left-radius: 8px;
 	border-bottom-right-radius: 8px;
-	padding: 15px;
+	padding: 15px 15px 55px 15px;
 }
 
-#modal-compose {
-	width: 473px;
-	height: 90px;
-	margin: 0 auto;
-	border-radius: 3px;
-}
-
-#modal-heading {
+#tweet-modal-heading {
 	font-size: 16px;
 	line-height: 22px;
 	color: #8899A6;
@@ -300,12 +296,9 @@ h2 {
 	text-align: center;
 }
 
-#modal-upload-photo {
-	background-image: url(../img/camera.png);
-	background-repeat: no-repeat;
-	background-size: 30px;
+.tweet-modal.upload-photo {
+	display: initial;	
 	background-position: left center;
-	float: left;
 	padding: 8px 5px;
 	padding-left: 30px;
 }
@@ -317,8 +310,17 @@ h2 {
 	padding: 6.5px 8.5px;
 }
 
-#compose-tweet-submit {
+.profile.compose-tweet-submit {
 	display: none;
+	margin-top: -1px;
+	
+}
+
+.tweet-modal.compose-tweet-submit {
+	margin-top: 4px;
+}
+
+.compose-tweet-submit {
 	float: right;
 	background-image: url(../img/post-tweet.png);
 	background-repeat: no-repeat;
@@ -332,13 +334,11 @@ h2 {
 	font-size: 14px;
 	padding: 10px 17px 12px 37px;
 	border-radius: 5px;
-	margin-top: -1px;
 	width: 96px;
 	opacity: 0.2;
 }
 
-#charcount {
-	display: none;
+.charcount {
 	float: right;
 	font-size: 14px;
 	color: #8899A6;
@@ -348,32 +348,72 @@ h2 {
 	text-align: right;
 }
 
-#upload-photo, #location {
+.tweet-modal.charcount {
+	margin-top: 15px;
+}
+
+.profile.charcount, .profile.upload-photo, .profile.location {
 	display: none;
-	float: right;
-	background-repeat: no-repeat;
-	background-position: center center;
+}
+
+.profile.upload-photo, .profile.location {
 	width: 30px;
 	height: 30px;
+	background-position: center center;
+}
+
+.tweet-modal.upload-photo, .tweet-modal.location {
+	font-size: 12px;
+}
+
+.tweet-modal.upload-photo {
+	color: #449EC1;
+}
+
+.profile.location {
+	margin-right: 47px;
+	margin-left: 4px;
+}
+
+.tweet-modal.location {
+	margin: 4px 117px 0 9px;
+	color: #7CBBD4;
+	padding: 9px 3px 8px 25px;
+	background-position: left 45%;
+}
+
+.tweet-modal.upload-photo {
+	padding: 8px 8px 8px 40px;
+	margin-top: 4px;
+	width: 60px;
+	height: 18px;
+	background-position: 10px center;
+	border: 1px solid transparent;
+}
+
+.upload-photo, .location {
+	float: right;
+	background-repeat: no-repeat;
 	border-radius: 5px;
 }
 
-#upload-photo {
+.upload-photo {
 	background-image: url(../img/camera.png);
 	background-size: 22px;
 	padding: 2px 6px 4px;
 }
 
-#location {
+.location {
 	background-image: url(../img/location.png);
 	background-size: 22px;
-	margin-right: 47px;
-	margin-left: 3px;
 	padding: 2px 5px 4px;
 }
 
-#upload-photo:hover {
+.upload-photo:hover {
 	border: solid 1px #94C8DD;
+}
+
+.profile.upload-photo:hover {
 	height: 28px;
 	width: 28px;
 }
