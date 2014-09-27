@@ -6,6 +6,7 @@
 	<link type="text/css" rel="stylesheet" href="css/reset.css">
 	<link type="text/css" rel="stylesheet" media="(max-width: 1200px)" href="css/responsive.css">
 	<link type="text/css" rel="stylesheet" media="(min-width: 1200px)" href="css/styles.css">
+	<link type="text/css" rel="stylesheet" media="(min-width: 640px)" href="css/jquery.modal.css">
 	<title>Twitter</title>
 </head>
 <body>
@@ -19,8 +20,15 @@
 			<li><input type="text" id="search" placeholder="Search Twitter"></li>
 			<li><div class="action" id="messages"></div></li>
 			<li><div class="action" id="settings"></div></li>
-			<li><div class="action" id="post-tweet"></div></li>
+			<li><a href="#post-tweet-modal" rel='modal:open'><div class="action" id="post-tweet"></div></a></li>
 		</ul>
+		<div id="post-tweet-modal" class="modal">
+			<div id="modal-heading">Compose new Tweet</div>
+			<div id="modal-body"><textarea id="modal-compose" class="compose-tweet-input"></textarea>
+			<div id="modal-upload-photo">Add photo</div>
+			<div id="modal-location">Location disabled</div>
+			</div>
+		</div>
 	</header>
 	<br clear="all">
 	<div class="profile">
@@ -41,7 +49,7 @@
 			</tr>
 		</table>
 		<div id="compose-tweet">
-			<textarea id="compose-tweet-input" placeholder="Compose new Tweet..."></textarea>
+			<textarea id="profile-compose" class="compose-tweet-input" placeholder="Compose new Tweet..."></textarea>
 			<button id="compose-tweet-submit">Tweet</button>
 			<div id="charcount">140</div>
 			<div id="location"></div>
@@ -208,5 +216,6 @@
 
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="js/interface.js"></script>
+	<script type="text/javascript" src="js/jquery.modal.min.js"></script>
 </body>
 </html>

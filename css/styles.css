@@ -17,7 +17,7 @@ header {
 	padding: 0 43px;
 	height: 45px;
 	position: fixed;
-	z-index: 9999;
+	z-index: 2;
 	width: 100%;
 	background-color: #FFF;
 }
@@ -40,7 +40,7 @@ header {
 	text-decoration: none;
 }
 
-.nav li a div:hover {
+.nav li a div:hover:not('#post-tweet-modal') {
 	color: #1385B2;
 	height: 42px;
 	border-bottom: solid 4px #1385B2;
@@ -155,10 +155,22 @@ header {
 	height: 32px;
 	width: 20px;
 	border-radius: 4px;
-	background-color: #1385B2;
+	background-color: #439DC1;
 	background-image: url(../img/post-tweet.png);
 	background-size: 24px;
 	background-position: 52% center;
+	transition: all 0.4s ease;
+}
+
+#post-tweet:hover {
+	background-color: #107298;
+}
+
+#post-tweet-modal {
+	display: none;
+	position: fixed;
+	background-color: #FFFFFF;
+	color: #000000;
 }
 
 #search::-webkit-input-placeholder {
@@ -242,7 +254,7 @@ h2 {
 	left: 35px;
 }
 
-#compose-tweet-input {
+.compose-tweet-input {
 	border-radius: 2px;
 	border: solid 1px #C5E1EC;
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -250,20 +262,59 @@ h2 {
 	line-height: 18px;
 	font-weight: 200;
 	letter-spacing: 0.3px;
-	padding: 6px 8px;
-	width: 246px;
 	resize: none;
-	height: 18px;
-	margin-top: 2px;
-	maxlength: 140;
 	color: #8999A5;
+	padding: 6px 8px;
 }
 
-#compose-tweet-input:focus {
+#profile-compose {
+	width: 246px;
+	height: 18px;
+	margin-top: 2px;
+}
+
+#post-tweet-modal {
+	width: 522px;
+}
+
+#modal-body {
+	background-color: #E8F3F7;
+	border-top: solid 1px #C5E1EC;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 15px;
+}
+
+#modal-compose {
+	width: 473px;
+	height: 90px;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+
+#modal-heading {
+	font-size: 16px;
+	line-height: 22px;
+	color: #8899A6;
+	padding: 8px;
+	text-align: center;
+}
+
+#modal-upload-photo {
+	background-image: url(../img/camera.png);
+	background-repeat: no-repeat;
+	background-size: 30px;
+	background-position: left center;
+	float: left;
+	padding: 8px 5px;
+	padding-left: 30px;
+}
+
+.compose-tweet-input:focus {
 	outline: none;
 	border: solid 0.5px #1385B2;
-	padding: 6.5px 8.5px;
 	color: #292F33;
+	padding: 6.5px 8.5px;
 }
 
 #compose-tweet-submit {
@@ -321,7 +372,7 @@ h2 {
 	padding: 2px 5px 4px;
 }
 
-#upload-photo:hover, #location:hover {
+#upload-photo:hover {
 	border: solid 1px #94C8DD;
 	height: 28px;
 	width: 28px;

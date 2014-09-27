@@ -39,7 +39,7 @@ $('document').ready(function(){
 		};
 	});
 
-	$('#compose-tweet-input').on('click', function(){
+	$('#profile-compose').on('click', function(){
 		$(this).css('height', '79px')
 		$(this).css('margin-bottom', '5px')
 		$('.trending').css('top', '425px')
@@ -49,7 +49,7 @@ $('document').ready(function(){
 		$('#location').show()
 	});
 
-	$('#compose-tweet-input').keyup(function(){
+	$('#profile-compose').keyup(function(){
 		var max = 140;
 		var charactersLeft = max - this.value.length;
 		$('#charcount').text(charactersLeft);
@@ -67,5 +67,7 @@ $('document').ready(function(){
 			$('#charcount').css('color', '#8899A6')
 		}
 	});
+
+
 
 });
