@@ -395,11 +395,20 @@ h2 {
 	font-weight: 600;
 }
 
+#user-name:hover {
+	text-decoration: underline;
+}
+
 #user-handle {
 	font-size: 12px;
 	line-height: 17px;
 	color: #76858F;
 	font-weight: 200;
+}
+
+#user-handle:hover {
+	text-decoration: underline;
+	color: #0084B4;
 }
 
 #user-avatar {
