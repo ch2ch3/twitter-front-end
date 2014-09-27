@@ -40,7 +40,7 @@ header {
 	text-decoration: none;
 }
 
-.nav li a div:hover:not('#post-tweet-modal') {
+.nav li a div:hover:not(#post-tweet) {
 	color: #1385B2;
 	height: 42px;
 	border-bottom: solid 4px #1385B2;
