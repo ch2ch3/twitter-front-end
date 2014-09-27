@@ -165,7 +165,7 @@ header {
    color: #fff;
 }
 
-#compose-tweet-input::-webkit-input-placeholder {
+#input::-webkit-input-placeholder {
 	color: #8999A5;
 }
 
@@ -256,12 +256,14 @@ h2 {
 	height: 18px;
 	margin-top: 2px;
 	maxlength: 140;
+	color: #8999A5;
 }
 
 #compose-tweet-input:focus {
 	outline: none;
 	border: solid 0.5px #1385B2;
 	padding: 6.5px 8.5px;
+	color: #292F33;
 }
 
 #compose-tweet-submit {
@@ -279,7 +281,7 @@ h2 {
 	font-size: 14px;
 	padding: 10px 17px 12px 37px;
 	border-radius: 5px;
-	margin-top: 4px;
+	margin-top: -1px;
 	width: 96px;
 	opacity: 0.2;
 }
@@ -289,8 +291,40 @@ h2 {
 	float: right;
 	font-size: 14px;
 	color: #8899A6;
-	margin-top: 13px;
+	margin-top: 8px;
 	margin-right: 12px;
+	width: 24px;
+	text-align: right;
+}
+
+#upload-photo, #location {
+	display: none;
+	float: right;
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+}
+
+#upload-photo {
+	background-image: url(../img/camera.png);
+	background-size: 22px;
+	padding: 2px 6px 4px;
+}
+
+#location {
+	background-image: url(../img/location.png);
+	background-size: 22px;
+	margin-right: 47px;
+	margin-left: 3px;
+	padding: 2px 5px 4px;
+}
+
+#upload-photo:hover, #location:hover {
+	border: solid 1px #94C8DD;
+	height: 28px;
+	width: 28px;
 }
 
 #profile-background {

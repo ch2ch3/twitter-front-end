@@ -41,10 +41,13 @@ $('document').ready(function(){
 
 	$('#compose-tweet-input').on('click', function(){
 		$(this).css('height', '79px')
+		$(this).css('margin-bottom', '5px')
 		$('.trending').css('top', '425px')
 		$('#compose-tweet-submit').css('display', 'inline')
 		$('#charcount').show()
-	})
+		$('#upload-photo').show()
+		$('#location').show()
+	});
 
 	$('#compose-tweet-input').keyup(function(){
 		var max = 140;
@@ -54,6 +57,14 @@ $('document').ready(function(){
 			$('#compose-tweet-submit').css('opacity', '1.0');
 		} else {
 			$('#compose-tweet-submit').css('opacity', '0.2');
+		}
+		
+		if(charactersLeft <= 20) {
+			$('#charcount').css('color', '#5C0002')
+		} if(charactersLeft <= 10) {
+			$('#charcount').css('color', '#D40D12')
+		} if(charactersLeft > 20) {
+			$('#charcount').css('color', '#8899A6')
 		}
 	});
 
