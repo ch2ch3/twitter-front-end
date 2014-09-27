@@ -49,7 +49,7 @@ $('document').ready(function(){
 		$('.location').show()
 	});
 
-	$('.profile.compose-tweet-input').keyup(function(){
+	$('.compose-tweet-input').keyup(function(){
 		var max = 140;
 		var charactersLeft = max - this.value.length;
 		$('.charcount').text(charactersLeft);
