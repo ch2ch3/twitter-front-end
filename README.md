@@ -3,11 +3,11 @@ Twitter Front End
 This week's challenge was to reimplement the Twitter.com feed page as close as possible to the real look and feel, so as to improve our front-end skills.
 
 Main features:
-
 - a fixed-position header which stays in place as the page is scrolled
 - infinite scrolling with dummy data using JavaScript
 - tweet input box which expands on focus to show more options
 - a pop-up modal for adding a new tweet through the button in the header
+- dynamic character count which changes colour as the user nears the limit of 140 characters
 - making the window width smaller changes the layout of the page
 
 Technologies used:
