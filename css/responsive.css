@@ -17,7 +17,7 @@ header {
 	padding: 0 43px;
 	height: 45px;
 	position: fixed;
-	z-index: 9999;
+	z-index: 2;
 	width: 100%;
 	background-color: #FFF;
 }
@@ -40,7 +40,7 @@ header {
 	text-decoration: none;
 }
 
-.nav li a div:hover {
+.nav li a div:hover:not(#post-tweet) {
 	color: #1385B2;
 	height: 42px;
 	border-bottom: solid 4px #1385B2;
@@ -155,17 +155,22 @@ header {
 	height: 32px;
 	width: 20px;
 	border-radius: 4px;
-	background-color: #1385B2;
+	background-color: #439DC1;
 	background-image: url(../img/post-tweet.png);
 	background-size: 24px;
 	background-position: 52% center;
+	transition: all 0.4s ease;
+}
+
+#post-tweet:hover {
+	background-color: #107298;
 }
 
 #search::-webkit-input-placeholder {
    color: #fff;
 }
 
-.compose-tweet-input::-webkit-input-placeholder {
+#input::-webkit-input-placeholder {
 	color: #8999A5;
 }
 
@@ -218,7 +223,7 @@ h2 {
 	letter-spacing: 0px;
 }
 
-.profile {
+#profile {
 	margin: 38px 0 0 43px;
 	float: left;
 	border-radius: 5px;
@@ -250,22 +255,72 @@ h2 {
 	line-height: 18px;
 	font-weight: 200;
 	letter-spacing: 0.3px;
-	padding: 6px 8px;
-	width: 246px;
 	resize: none;
+	color: #8999A5;
+	padding: 6px 8px;
+}
+
+.profile.compose-tweet-input {
+	width: 246px;
 	height: 18px;
 	margin-top: 2px;
-	maxlength: 140;
+}
+
+.tweet-modal.compose-tweet-input {
+	width: 473px;
+	height: 90px;
+	margin: 0 auto;
+}
+
+#post-tweet-modal {
+	width: 522px;
+	display: none;
+	position: fixed;
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+#tweet-modal-body {
+	background-color: #E8F3F7;
+	border-top: solid 1px #C5E1EC;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	padding: 15px 15px 55px 15px;
+}
+
+#tweet-modal-heading {
+	font-size: 16px;
+	line-height: 22px;
+	color: #8899A6;
+	padding: 8px;
+	text-align: center;
+}
+
+.tweet-modal.upload-photo {
+	display: initial;	
+	background-position: left center;
+	padding: 8px 5px;
+	padding-left: 30px;
 }
 
 .compose-tweet-input:focus {
 	outline: none;
 	border: solid 0.5px #1385B2;
+	color: #292F33;
 	padding: 6.5px 8.5px;
 }
 
-#compose-tweet-submit {
+.profile.compose-tweet-submit {
 	display: none;
+	margin-top: -1px;
+	
+}
+
+.tweet-modal.compose-tweet-submit {
+	margin-top: 4px;
+}
+
+.compose-tweet-submit {
 	float: right;
 	background-image: url(../img/post-tweet.png);
 	background-repeat: no-repeat;
@@ -279,18 +334,88 @@ h2 {
 	font-size: 14px;
 	padding: 10px 17px 12px 37px;
 	border-radius: 5px;
-	margin-top: 4px;
 	width: 96px;
 	opacity: 0.2;
 }
 
-#charcount {
-	display: none;
+.charcount {
 	float: right;
 	font-size: 14px;
 	color: #8899A6;
-	margin-top: 13px;
+	margin-top: 8px;
 	margin-right: 12px;
+	width: 24px;
+	text-align: right;
+}
+
+.tweet-modal.charcount {
+	margin-top: 15px;
+}
+
+.profile.charcount, .profile.upload-photo, .profile.location {
+	display: none;
+}
+
+.profile.upload-photo, .profile.location {
+	width: 30px;
+	height: 30px;
+	background-position: center center;
+}
+
+.tweet-modal.upload-photo, .tweet-modal.location {
+	font-size: 12px;
+}
+
+.tweet-modal.upload-photo {
+	color: #449EC1;
+}
+
+.profile.location {
+	margin-right: 47px;
+	margin-left: 3px;
+}
+
+.tweet-modal.location {
+	margin: 4px 117px 0 9px;
+	color: #7CBBD4;
+	padding: 9px 3px 8px 25px;
+	background-position: left 45%;
+}
+
+.tweet-modal.upload-photo {
+	padding: 8px 8px 8px 40px;
+	margin-top: 4px;
+	width: 60px;
+	height: 18px;
+	background-position: 10px center;
+	border: 1px solid transparent;
+}
+
+.upload-photo, .location {
+	float: right;
+	background-repeat: no-repeat;
+	border-radius: 5px;
+}
+
+.upload-photo {
+	background-image: url(../img/camera.png);
+	background-size: 22px;
+	padding: 2px 6px 4px;
+}
+
+.location {
+	background-image: url(../img/location.png);
+	background-size: 22px;
+	padding: 2px 5px 4px;
+}
+
+.upload-photo:hover {
+	border: solid 1px #94C8DD;
+}
+
+.profile.upload-photo:hover {
+	height: 28px;
+	width: 28px;
 }
 
 #profile-background {
@@ -310,11 +435,20 @@ h2 {
 	font-weight: 600;
 }
 
+#user-name:hover {
+	text-decoration: underline;
+}
+
 #user-handle {
 	font-size: 12px;
 	line-height: 17px;
 	color: #76858F;
 	font-weight: 200;
+}
+
+#user-handle:hover {
+	text-decoration: underline;
+	color: #0084B4;
 }
 
 #user-avatar {
