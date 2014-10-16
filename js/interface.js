@@ -11,11 +11,15 @@ $('document').ready(function(){
 	});
 
 	$('.source').hover(function(){
-		$(this).find('.name').css('text-decoration', 'underline')
-		$(this).find('.name').css('color', '#1988B4')
+		$(this).find('.name').css({
+			'text-decoration': 'underline',
+			'color': '#1988B4'
+		})
 	}, function(){
-		$(this).find('.name').css('text-decoration', 'none')
-		$(this).find('.name').css('color', '#000000')
+		$(this).find('.name').css({
+			'text-decoration': 'none',
+			'color': '#000000'
+		})
 	});
 
 	$('div.retweeted-tweet').hover(function(){
@@ -40,8 +44,10 @@ $('document').ready(function(){
 	});
 
 	$('.profile.compose-tweet-input').on('click', function(){
-		$(this).css('height', '79px')
-		$(this).css('margin-bottom', '5px')
+		$(this).css({
+			'height': '79px',
+			'margin-bottom': '5px'
+		})
 		$('.trending').css('top', '425px')
 		$('.profile.compose-tweet-submit').css('display', 'inline')
 		$('.profile.charcount').show()
